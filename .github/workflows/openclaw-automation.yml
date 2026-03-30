@@ -1,0 +1,49 @@
+name: OpenClaw Development Automation
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  schedule:
+    - cron: '0 9 * * *'  # Daily at 9 AM
+
+jobs:
+  openclaw-automation:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Install OpenClaw
+      run: npm install -g openclaw
+
+    - name: Run code review automation
+      run: npm run automate:review
+      env:
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+    - name: Run tests
+      run: npm run automate:test
+
+    - name: Generate documentation
+      run: npm run automate:docs
+
+    - name: Upload automation results
+      uses: actions/upload-artifact@v4
+      with:
+        name: openclaw-automation-results
+        path: |
+          automation-report.md
+          docs/
+        if-no-files-found: warn

@@ -1,0 +1,18 @@
+ERROR:
+STDOUT:src/lib/utils.ts(1,39): error TS2307: Cannot find module 'clsx' or its corresponding type declarations.
+src/lib/utils.ts(2,25): error TS2307: Cannot find module 'tailwind-merge' or its corresponding type declarations.
+src/store/index.ts(1,24): error TS2307: Cannot find module 'zustand' or its corresponding type declarations.
+src/store/index.ts(23,46): error TS7006: Parameter 'set' implicitly has an 'any' type.
+src/store/index.ts(25,20): error TS7006: Parameter 'q' implicitly has an 'any' type.
+src/store/index.ts(27,25): error TS7006: Parameter 'c' implicitly has an 'any' type.
+src/store/index.ts(29,22): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/store/index.ts(31,19): error TS7006: Parameter 'r' implicitly has an 'any' type.
+src/store/index.ts(33,17): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/store/index.ts(35,15): error TS7006: Parameter 's' implicitly has an 'any' type.
+src/store/index.ts(38,10): error TS7006: Parameter 'state' implicitly has an 'any' type.
+src/store/index.ts(46,17): error TS7006: Parameter 'd' implicitly has an 'any' type.
+src/store/index.ts(53,20): error TS7006: Parameter 'id' implicitly has an 'any' type.
+src/store/index.ts(54,10): error TS7006: Parameter 'state' implicitly has an 'any' type.
+src/store/index.ts(56,35): error TS7006: Parameter 'f' implicitly has an 'any' type.
+
+STDERR:

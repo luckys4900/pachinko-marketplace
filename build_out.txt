@@ -1,0 +1,30 @@
+BUILD ERROR:
+▲ Next.js 16.2.1 (Turbopack)
+
+  Creating an optimized production build ...
+
+---STDERR---
+chQuery: string;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Desktop/cursor/pachinko/src/store/index.ts [Client Component Browser]
+    ./Desktop/cursor/pachinko/src/app/search/page.tsx [Client Component Browser]
+    ./Desktop/cursor/pachinko/src/app/search/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/cursor/pachinko/src/store/index.ts [Client Component SSR]
+    ./Desktop/cursor/pachinko/src/app/search/page.tsx [Client Component SSR]
+    ./Desktop/cursor/pachinko/src/app/search/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./Desktop/cursor/pachinko/src/lib/utils.ts:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/cursor/pachinko/src/lib/utils.ts:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/cursor/pachinko/src/store/index.ts:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
